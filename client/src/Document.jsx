@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import ReactDOM from "react-dom";
 import { Editor } from "react-draft-wysiwyg";
 import { EditorState, convertToRaw } from "draft-js";
@@ -7,10 +7,9 @@ import html2pdf from "html-to-pdf-js";
 import jsPDF from "jspdf";
 import createImagePlugin from "@draft-js-plugins/image";
 import ReactDOMServer from "react-dom/server";
-
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-
-// import "./styles.css";
+import PropTypes from "prop-types";
+import { RichUtils } from "draft-js";
 
 const Document = () => {
   const [description, setDescription] = useState({
@@ -55,13 +54,44 @@ const Document = () => {
   return (
     <div className="App">
       <Editor
-        toolbarHidden={false}
+        // toolbarCustomButtons={<button onClick={onSave}>Save</button>}
+        editorClassName="bg-white max-w-screen-md mx-auto px-4 py-2 my-10 min-h-[297mm]"
+        toolbarStyle={{
+          border: "none",
+          padding: "10px 5px",
+          borderRadius: "none",
+        }}
+        toolbarCustomButtons={[
+          <div className="float-right last:ml-auto px-2">
+            <button
+              className="bg-[#70BF7B] hover:bg-[#579860] transition px-4 py-2 rounded text-white font-bold"
+              onClick={onSave}
+            >
+              Save
+            </button>
+          </div>,
+        ]}
+        toolbarClassName="sticky top-16 left-0 right-0 z-50 border-none"
+        toolbar={{
+          options: [
+            "inline",
+            "blockType",
+            "fontSize",
+            // "fontFamily",
+            "list",
+            "textAlign",
+            // "link",
+            // "embedded",
+            "image",
+            // "remove",
+            "history",
+          ],
+        }}
         editorState={description.editorState}
         onEditorStateChange={onEditorStateChange}
-        placeholder="hello placeholder"
+        placeholder="Start Typing..."
         plugins={[imagePlugin]}
       />
-      <button onClick={onSave}>Save</button>
     </div>
   );
 };

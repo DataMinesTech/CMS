@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 import Document from "./Document";
+import EditorSidebar from "./components/layouts/EditorSidebar";
 // import io from "socket.io-client";
 
 function App() {
@@ -102,62 +103,9 @@ function App() {
 
   const [text, setText] = useState("");
   return (
-    <div className="App">
-      <div className="editor">
-        {/* <CKEditor
-          editor={ClassicEditor}
-          data={text}
-          onChange={(event, editor) => {
-            const data = editor.getData();
-            setText(data);
-          }}
-        /> */}
-
-        <Document />
-      </div>
-      <div>
-        <p>{parse(text)}</p>
-      </div>
-      <form onSubmit={submitHandler} encType="multipart/form-data">
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          placeholder="To"
-        />
-        <input
-          type="text"
-          name="message"
-          value={message}
-          onChange={(e) => {
-            setMessage(e.target.value);
-          }}
-          placeholder="message"
-        />
-        <input
-          type="file"
-          name="file"
-          onChange={(e) => {
-            setFile(e.target.files[0]);
-          }}
-        />
-        <input
-          type="text"
-          name="subject"
-          value={subject}
-          onChange={(e) => {
-            setSubject(e.target.value);
-          }}
-          placeholder="subject"
-        />
-        <button type="submit" value="Register">
-          submit
-        </button>
-      </form>
-    </div>
+    <>
+      <EditorSidebar />
+    </>
   );
 }
 
