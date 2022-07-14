@@ -1,0 +1,21 @@
+/* .App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 5em;
+}
+
+.editor {
+  margin-right: 10em;
+}
+
+.ck-editor__editable_inline {
+  min-height: 500px;
+}
+
+.App {
+  font-family: sans-serif;
+  max-width: 33rem;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border: 1px solid #999;
+} */
