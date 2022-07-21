@@ -10,6 +10,7 @@
     "@draft-js-plugins/mention": "^5.2.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.0",
     "@syncfusion/ej2-react-documenteditor": "^20.2.36",
     "@testing-library/jest-dom": "^5.16.4",

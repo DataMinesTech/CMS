@@ -6,6 +6,8 @@ import axios from "axios";
 import "./App.css";
 import Document from "./Document";
 import EditorSidebar from "./components/layouts/EditorSidebar";
+import Dashboard from "./components/layouts/Dashboard";
+// import Dashboard from "./components/layouts/dashboard";
 // import io from "socket.io-client";
 
 function App() {
@@ -104,7 +106,8 @@ function App() {
   const [text, setText] = useState("");
   return (
     <>
-      <EditorSidebar />
+      {/* <EditorSidebar /> */}
+      <Dashboard />
     </>
   );
 }
