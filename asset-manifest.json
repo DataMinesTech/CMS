@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/CMS/static/css/main.ac93a519.css",
+    "main.js": "/CMS/static/js/main.3bd09024.js",
+    "static/js/703.bc842e31.chunk.js": "/CMS/static/js/703.bc842e31.chunk.js",
+    "static/js/617.1a6f3640.chunk.js": "/CMS/static/js/617.1a6f3640.chunk.js",
+    "index.html": "/CMS/index.html",
+    "main.ac93a519.css.map": "/CMS/static/css/main.ac93a519.css.map",
+    "main.3bd09024.js.map": "/CMS/static/js/main.3bd09024.js.map",
+    "703.bc842e31.chunk.js.map": "/CMS/static/js/703.bc842e31.chunk.js.map",
+    "617.1a6f3640.chunk.js.map": "/CMS/static/js/617.1a6f3640.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac93a519.css",
+    "static/js/main.3bd09024.js"
+  ]
+}
