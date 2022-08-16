@@ -18,7 +18,15 @@ app.use(
   })
 );
 
-app.use(cors());
+// if (process.env.NODE_ENV === "production") {
+//   app.use();
+// } else {
+//   app.get("/", (req, res) => {
+//     res.send("API is running");
+//   });
+// }
+
+// app.use(cors());
 
 // app.use(function (req, res, next) {
 //   res.setHeader("Access-Control-Allow-Origin", "*");

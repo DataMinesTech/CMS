@@ -12,14 +12,6 @@ connectDatabase();
 
 __dirname = path.resolve();
 
-if (process.env.NODE_ENV === "production") {
-  app.use();
-} else {
-  app.get("/", (req, res) => {
-    res.send("API is running");
-  });
-}
-
 app.listen(process.env.PORT, () => {
   console.log(`Server Working on Port http://localhost:${process.env.PORT}`);
 });
